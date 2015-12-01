@@ -1,0 +1,20 @@
+﻿<Window x:Class="VocabularyTest.Vocabulary"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Vocabulary" Height="300" Width="300">
+    <ScrollViewer HorizontalScrollBarVisibility="Auto">
+        <StackPanel>
+            <RadioButton Name="rdbFinEng" Content="Finnish-English" />
+            <RadioButton Name="rdbEngFin" Content="English-Finnish"/>
+            <Button Name="btnShow" Content="Show Vocabulary" Background="Aqua" Click="btnShow_Click"/>
+            <ListBox Name="lsbWords">
+                <ListBox.ItemsPanel>
+                    <ItemsPanelTemplate>
+                        <UniformGrid Columns="2"/>
+                    </ItemsPanelTemplate>
+                </ListBox.ItemsPanel>
+            </ListBox>
+            <Button Name="btnClose" Content="Close" Background="Aqua" Click="btnClose_Click"/>
+        </StackPanel>
+    </ScrollViewer>
+</Window>

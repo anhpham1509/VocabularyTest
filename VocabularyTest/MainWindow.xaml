@@ -1,0 +1,27 @@
+﻿<Window x:Class="VocabularyTest.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="MainWindow" Height="460" Width="400">
+    <StackPanel>
+        <Button Name="btnShow" Content="Show Words" Background="LightYellow" Click="btnShow_Click"/>
+        <Label Name="lblLanguage" Content="Language" FontWeight="Bold"/>
+        <RadioButton GroupName="grpLanguage" Name="rdbEngFin" Content="English-Finnish" IsChecked="True"/>
+        <RadioButton GroupName="grpLanguage" Name="rdbFinEng" Content="Finnish-English"/>
+        <RadioButton GroupName="grpLanguage" Name="rdbMixed" Content="English-Finnish/Finnish-English"/>
+        <Label Name="lblTestMode" Content="Test Mode" FontWeight="Bold"/>
+        <RadioButton GroupName="grpTestMode" Name="rdb10" Content="10 words" IsChecked="True"/>
+        <RadioButton GroupName="grpTestMode" Name="rdbAll" Content="All words once"/>
+        <RadioButton GroupName="grpTestMode" Name="rdbRepeat" Content="Repeat Until all words Right"/>
+        <Button Name="btnStart" Content="Start a test!" Background="LightGreen" Click="btnStart_Click"/>
+        <Label Content="Original Word:"/>
+        <TextBox Name="txtWord1"/>
+        <Label Content="Your answer:"/>
+        <TextBox Name="txtWord2"/>
+        <Button Name="btnCheck" Content="Check" Click="btnCheck_Click" IsDefault="True"/>
+        <Label Content="Results" FontWeight="Bold"/>
+        <TextBlock Name="txbRight" Text="Right:"/>
+        <Label Name="lblRightBar" Background="Green" Content=" " Width="1" HorizontalContentAlignment="Left" HorizontalAlignment="Left" Margin="10,0,0,0"/>
+        <TextBlock Name="txbWrong" Text="Wrong:"/>
+        <Label Name="lblWrongBar" Background="Red" Content=" " Width="1" HorizontalContentAlignment="Left" HorizontalAlignment="Left" Margin="10,0,0,0"/>
+    </StackPanel>
+</Window>
